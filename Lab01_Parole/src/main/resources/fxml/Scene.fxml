@@ -24,11 +24,31 @@
             <HBox spacing="10.0">
                <children>
                   <Label text="Parola" />
-                  <TextField fx:id="txtParola" onAction="#doInsert" promptText="inserisci..." />
-                  <Button fx:id="btnInserisci" mnemonicParsing="false" onAction="#doInsert" text="Inserisci" />
+                  <TextField fx:id="txtParola" onAction="#doInsert" prefWidth="200.0" promptText="inserisci...">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin></TextField>
+                  <Button fx:id="btnInserisci" mnemonicParsing="false" onAction="#doInsert" text="Inserisci">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></Button>
                </children>
             </HBox>
             <TextArea fx:id="txtResult" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+            <HBox>
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <Label text="Tempo di esecuzione :" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane>
+                     <children>
+                        <TextArea fx:id="txtTempo" maxWidth="150.0" minHeight="25.0" prefHeight="25.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </center>
